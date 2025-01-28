@@ -1,92 +1,117 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS-Grid Gantt Chart</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="wrapper">
-        <div class="header">
-    
+      <div class="gantt">
+        <div class="gantt__row gantt__row--months">
+          <div class="gantt__row-first"><!-- cell --></div>
+          <span>1月</span>
+          <span>2月</span>
+          <span>3月</span>
+          <span>4月</span>
+          <span>5月</span>
+          <span>6月</span>
+          <span>7月</span>
+          <span>8月</span>
+          <span>9月</span>
+          <span>10月</span>
+          <span>11月</span>
+          <span>12月</span>
         </div>
-        <div class="gantt">
-            <div class="gantt__row gantt__row--months">
-                <div class="gantt__row-first"></div>
-                <span>1月</span><span>2月</span><span>3月</span>
-                <span>4月</span><span>5月</span><span>6月</span>
-                <span>7月</span><span>8月</span><span>9月</span>
-                <span>10月</span><span>11月</span>
-                <span>12月</span>
-            </div>
-            <div class="gantt__row gantt__row--lines" data-month="5">
-                <span></span><span></span><span></span>
-                <span></span><span></span><span></span>
-                <span></span><span class="marker"></span><span></span>
-                <span></span><span></span><span></span>
-            </div>
-            <div class="gantt__row">
-                <div class="gantt__row-first">
-                    佐藤
-                </div>
-                <ul class="gantt__row-bars">
-                    <li style="grid-column: 4/11; background-color: #2ecaac;">ディレクション</li>
-                </ul>
-            </div>
-            <div class="gantt__row gantt__row--empty">
-                <div class="gantt__row-first">
-                    田中
-                </div>
-                <ul class="gantt__row-bars"></ul>
-            </div>
-            <div class="gantt__row">
-                <div class="gantt__row-first">
-                    山田
-                </div>
-                <ul class="gantt__row-bars">
-                    <li style="grid-column: 2/5; background-color: #2ecaac;">デザイン</li>
-                    <li style="grid-column: 1/6; background-color: #ff6252;" class="stripes">見積もり・ディレクション</li>
-                    <li style="grid-column: 7/11; background-color: #54c6f9;">マークアップ</li>
-                </ul>
-            </div>
-            <div class="gantt__row gantt__row--empty">
-                <div class="gantt__row-first">
-                    内藤
-                </div>
-                <ul class="gantt__row-bars"></ul>
-            </div>
-            <div class="gantt__row gantt__row--empty">
-                <div class="gantt__row-first">
-                    高橋
-                </div>
-                <ul class="gantt__row-bars"></ul>
-            </div>
-            <div class="gantt__row">
-                <div class="gantt__row-first">
-                    中島
-                </div>
-                <ul class="gantt__row-bars">
-                    <li style="grid-column: 2/5; background-color: #2ecaac;">デザイン</li>
-                </ul>
-            </div>
-            <div class="gantt__row">
-                <div class="gantt__row-first">
-                    スミス
-                </div>
-                <ul class="gantt__row-bars">
-                    <li style="grid-column: 3/8; background-color: #54c6f9;">コーディング</li>
-                </ul>
-            </div>
-    
-            <div class="gantt__row">
-                <div class="gantt__row-first">
-                    アンダーソン
-                </div>
-                <ul class="gantt__row-bars">
-                    <li style="grid-column: 4/9; background-color: #ff6252;" class="stripes">マークアップ</li>
-                </ul>
-            </div>
+
+        <div class="gantt__row gantt__row--lines">
+          <span><!-- 1月 --></span>
+          <span><!-- 2月 --></span>
+          <span><!-- 3月 --></span>
+          <span><!-- 4月 --></span>
+          <span><!-- 5月 --></span>
+          <span><!-- 6月 --></span>
+          <span><!-- 7月 --></span>
+          <span class="marker"><!-- 8月 --></span>
+          <span><!-- 9月 --></span>
+          <span><!-- 10月 --></span>
+          <span><!-- 11月 --></span>
+          <span><!-- 12月 --></span>
         </div>
-</body>
+
+        <div class="gantt__row">
+          <div class="gantt__row-first">佐藤</div>
+          <ul class="gantt__row-bars">
+            <li style="grid-column: 4/11; background-color: #2ecaac">
+              ディレクション
+            </li>
+          </ul>
+        </div>
+
+        <div class="gantt__row gantt__row--empty">
+          <div class="gantt__row-first">田中</div>
+          <ul class="gantt__row-bars"></ul>
+        </div>
+
+        <div class="gantt__row">
+          <div class="gantt__row-first">山田</div>
+          <ul class="gantt__row-bars">
+            <li style="grid-column: 2/5; background-color: #2ecaac">
+              デザイン
+            </li>
+            <li
+              style="grid-column: 1/6; background-color: #ff6252"
+              class="stripes"
+            >
+              見積もり・ディレクション
+            </li>
+            <li style="grid-column: 7/11; background-color: #54c6f9">
+              マークアップ
+            </li>
+          </ul>
+        </div>
+
+        <div class="gantt__row gantt__row--empty">
+          <div class="gantt__row-first">内藤</div>
+          <ul class="gantt__row-bars"></ul>
+        </div>
+
+        <div class="gantt__row gantt__row--empty">
+          <div class="gantt__row-first">高橋</div>
+          <ul class="gantt__row-bars"></ul>
+        </div>
+
+        <div class="gantt__row">
+          <div class="gantt__row-first">中島</div>
+          <ul class="gantt__row-bars">
+            <li style="grid-column: 2/5; background-color: #2ecaac">
+              デザイン
+            </li>
+          </ul>
+        </div>
+
+        <div class="gantt__row">
+          <div class="gantt__row-first">スミス</div>
+          <ul class="gantt__row-bars">
+            <li style="grid-column: 3/8; background-color: #54c6f9">
+              コーディング
+            </li>
+          </ul>
+        </div>
+
+        <div class="gantt__row">
+          <div class="gantt__row-first">アンダーソン</div>
+          <ul class="gantt__row-bars">
+            <li
+              style="grid-column: 4/9; background-color: #ff6252"
+              class="stripes"
+            >
+              マークアップ
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
